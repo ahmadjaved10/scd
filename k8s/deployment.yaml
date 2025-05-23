@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-app
+  name: kub
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: node-app
+      app: kub
   template:
     metadata:
       labels:
-        app: node-app
+        app: kub
     spec:
       containers:
-      - name: node-app
-        image: ahmadjaved/node-app:latest
+      - name: kub
+        image: ahmadjaved/kub:latest
         ports:
         - containerPort: 3000
